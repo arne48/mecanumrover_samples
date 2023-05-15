@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <include file="$(find mecanumrover_samples)/launch/vmecanumrover.launch">
+    <arg name="world" value="worlds/willowgarage.world" />
+  </include>
+</launch>
