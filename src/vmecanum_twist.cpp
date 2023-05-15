@@ -26,12 +26,12 @@ int main(int argc, char** argv)
   ros::NodeHandle pn("~");
 
   // publish
-  ros::Publisher wheel0_pub = n.advertise<std_msgs::Float64>("wheel0", 10);
-  ros::Publisher wheel1_pub = n.advertise<std_msgs::Float64>("wheel1", 10);
-  ros::Publisher wheel2_pub = n.advertise<std_msgs::Float64>("wheel2", 10);
-  ros::Publisher wheel3_pub = n.advertise<std_msgs::Float64>("wheel3", 10);
+  ros::Publisher wheel0_pub = n.advertise<std_msgs::Float64>("wheel0", 1);
+  ros::Publisher wheel1_pub = n.advertise<std_msgs::Float64>("wheel1", 1);
+  ros::Publisher wheel2_pub = n.advertise<std_msgs::Float64>("wheel2", 1);
+  ros::Publisher wheel3_pub = n.advertise<std_msgs::Float64>("wheel3", 1);
   // Subscribe
-  ros::Subscriber joy_sub = n.subscribe("rover_twist", 10, twist_stamped_callback);
+  ros::Subscriber joy_sub = n.subscribe("rover_twist", 1, twist_stamped_callback);
 
   pn.getParam("wheel_circumference", wheel_circumference);
   pn.getParam("rover_d", ROVER_D);

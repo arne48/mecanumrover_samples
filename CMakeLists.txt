@@ -10,6 +10,7 @@ project(mecanumrover_samples)
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   nav_msgs
+  std_msgs
   roscpp
   rospy
   sensor_msgs
