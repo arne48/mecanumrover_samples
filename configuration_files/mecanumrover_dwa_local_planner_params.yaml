@@ -2,43 +2,50 @@
 # 各パラメータについては http://wiki.ros.org/dwa_local_planner?distro=kinetic を参照してください。
 
 DWAPlannerROS:
-  acc_lim_x: 0.2
-  acc_lim_y: 0.0
-  acc_lim_th: 0.1
-#  max_trans_vel: 0.5
-#  min_trans_vel: -0.5
   max_vel_trans: 0.5
-  min_vel_trans: -0.5
+  min_vel_trans: 0.1
+
   max_vel_x: 0.5
   min_vel_x: -0.5
-  max_vel_y: 0.0
-  min_vel_y: 0.0
-#  max_rot_vel: 0.5
-#  min_rot_vel: -0.5
-  max_vel_theta: 0.5
-  min_vel_theta: -0.5
 
-  yaw_goal_tolerance: 0.3
-  xy_goal_tolerance: 0.2
-  latch_xy_goal_tolerance: true
+  max_vel_y: 0.5
+  min_vel_y: 0.1
 
-  sim_time: 4.0
+  max_vel_theta: 0.75
+  min_vel_theta: 0.2
+
+  acc_lim_x: 1.5
+  acc_lim_y: 1.5
+  acc_lim_theta: 1.5
+  acc_lim_trans: 0.5
+
+  sim_time: 1.0
   sim_granularity: 0.025
-  vx_samples: 10
-  vtheta_samples: 20
 
-  path_distance_bias: 72.0
-  goal_distance_bias: 28.0
-  occdist_scale: 0.5
-  forward_point_distance: 0.2
+  goal_distance_bias: 19.0
+  path_distance_bias: 33.0
+
+  occdist_scale: 0.01
+
+  stop_time_buffer: 0.2
+  oscillation_reset_dist: 0.05
+
+  forward_point_distance: 0.325
+
   scaling_speed: 0.25
   max_scaling_factor: 0.2
 
-  oscillation_reset_dist: 0.05
+  vx_samples: 10
+  vy_samples: 10
+  vtheta_samples: 10
 
-  publish_traj_pc: true
-  publish_cost_grid_pc: true
-  global_frame_id: odom
+  sim_period: 0.5
 
-  holonomic_robot: false
+  xy_goal_tolerance: 0.1
+  yaw_goal_tolerance: 0.1
+  latch_xy_goal_tolerance: false
 
+  theta_stopped_vel: 0.01
+  trans_stopped_vel: 0.01
+
+  publish_cost_grid: true

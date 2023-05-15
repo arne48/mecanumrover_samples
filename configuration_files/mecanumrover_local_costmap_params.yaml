@@ -6,7 +6,7 @@ local_costmap:
     - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
 
   # 各TFフレームの設定
-  global_frame: odom
+  global_frame: map
   robot_base_frame: base_link
 
   #inflation_layerの設定
@@ -14,8 +14,8 @@ local_costmap:
     inflation_radius: 0.05
 
   # 更新頻度の設定
-  update_frequency: 3.0
-  publish_frequency: 3.0
+  update_frequency: 20.0
+  publish_frequency: 20.0
 
   # ローカルコストマップの計算範囲
   rolling_window: true

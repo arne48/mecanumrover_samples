@@ -12,11 +12,13 @@ global_costmap:
 
   #inflation_layerの設定
   inflation_layer:
-    inflation_radius: 0.1
+    enabled:              true
+    cost_scaling_factor:  2.58  # exponential rate at which the obstacle cost drops off (default: 10)
+    inflation_radius:     1.75  # max. distance from an obstacle at which costs are incurred for planning paths.
 
   # 更新頻度
-  update_frequency: 2.0
-  publish_frequency: 2.0
+  update_frequency: 20.0
+  publish_frequency: 20.0
 
   # タイムスタンプの差の許容量
   transform_tolerance: 0.5

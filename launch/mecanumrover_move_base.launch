@@ -93,7 +93,7 @@
   </group>
  
   <!-- Run the map server -->
-  <arg name="map_file" default="$(find mecanumrover_samples)/map/vmecanumrover_samplemap.yaml"/>
+  <arg name="map_file" default="$(find mecanumrover_samples)/map/willow_garage.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
  
   <!--- Run AMCL -->
